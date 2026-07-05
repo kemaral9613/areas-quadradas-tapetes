@@ -1,0 +1,39 @@
+INSTRUCCIONES:
+Este NO es un robots.txt completo para reemplazar el tuyo. WordPress (con Yoast SEO
+o RankMath) ya gestiona https://areasquadradas.com/robots.txt. Abre ese archivo real
+(desde el plugin SEO o el Administrador de Archivos de Hostinger) y AÑADE estas
+líneas al final, sin borrar lo que ya existe:
+
+Sitemap: https://areasquadradas.com/tapetes-atrapamugres-pvc/sitemap.xml
+
+# Permitir explícitamente bots de IA (decisión tomada: maximizar visibilidad
+# en respuestas de ChatGPT, Claude, Perplexity, Google AI Overviews, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Después de guardar, verifica en https://areasquadradas.com/robots.txt que la
+carpeta /tapetes-atrapamugres-pvc/ NO aparezca en ninguna línea "Disallow".

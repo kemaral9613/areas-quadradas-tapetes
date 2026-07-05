@@ -1,0 +1,66 @@
+INSTRUCCIONES DE DESPLIEGUE — Landing Tapetes Atrapamugres (Áreas Quadradas)
+================================================================================
+
+1. SUBIR LA LANDING A HOSTINGER
+   - En hPanel de Hostinger, abre el Administrador de Archivos.
+   - Entra a la carpeta public_html/ (donde ya vive tu WordPress).
+   - Sube la carpeta "tapetes-atrapamugres-pvc" completa (tal cual está aquí)
+     dentro de public_html/. Resultado esperado:
+       public_html/tapetes-atrapamugres-pvc/index.html
+   - Verifica que quede accesible en:
+       https://areasquadradas.com/tapetes-atrapamugres-pvc/
+
+2. SUBIR llms.txt A LA RAÍZ DEL DOMINIO
+   - Sube el archivo "PARA-RAIZ-DEL-DOMINIO/llms.txt" directamente en
+     public_html/ (junto a wp-config.php), NO dentro de la subcarpeta.
+   - Debe quedar accesible en: https://areasquadradas.com/llms.txt
+
+3. AJUSTAR EL robots.txt RAÍZ (el de WordPress)
+   - Abre tu robots.txt real (desde Yoast SEO / RankMath, o el Administrador
+     de Archivos) en https://areasquadradas.com/robots.txt
+   - Añade las líneas del archivo "PARA-RAIZ-DEL-DOMINIO/lineas-a-agregar-en-robots-txt-raiz.txt"
+     SIN borrar lo que ya existe.
+   - Confirma que no haya ningún "Disallow: /tapetes-atrapamugres-pvc/".
+
+4. CREAR EL ENLACE EN EL MENÚ DE WORDPRESS
+   - WordPress → Apariencia → Menús → Añadir elementos → Enlaces personalizados.
+   - URL: https://areasquadradas.com/tapetes-atrapamugres-pvc/
+   - Texto del enlace: "Tapetes Atrapamugres" (o el que prefieras).
+   - Añadir al menú → Guardar menú.
+
+5. GOOGLE SEARCH CONSOLE
+   - Si tu propiedad ya cubre https://areasquadradas.com/, la subcarpeta queda
+     cubierta automáticamente.
+   - Sitemaps → añadir: tapetes-atrapamugres-pvc/sitemap.xml
+   - Inspección de URL → pega la URL de la landing → "Solicitar indexación".
+
+6. ANTES DE LANZAR LAS CAMPAÑAS (Google Ads / Facebook Ads)
+   - Reemplaza los IDs de seguimiento (búscalos como "TODO" en index.html):
+       - AW-XXXXXXXXXX  → tu ID de conversión de Google Ads
+       - G-XXXXXXXXXX   → tu Measurement ID de GA4 (opcional)
+       - 000000000000000 → tu Meta Pixel ID
+   - Vuelve a subir solo el archivo index.html actualizado (no hace falta
+     resubir todo).
+   - Prueba el banner de cookies: al aceptar, revisa en la consola del
+     navegador (F12 → Network) que se carguen gtag.js y fbevents.js.
+
+7. PENDIENTES DE CONTENIDO (marcados con comentarios <!-- PLACEHOLDER --> o
+   <!-- TODO --> dentro de los archivos HTML):
+   - Fotos reales de producto/instalación para la Galería (5 de 6 espacios).
+   - Testimonios reales de clientes (con su autorización).
+   - Razón social completa, NIT y correo de contacto para las páginas legales.
+
+8. VERIFICACIÓN RECOMENDADA DESPUÉS DE PUBLICAR
+   - https://search.google.com/test/rich-results  (valida los datos estructurados)
+   - https://pagespeed.web.dev/  (rendimiento, apunta a ≥90 en móvil)
+   - https://search.google.com/search-console/mobile-friendly (opcional)
+   - Revisa la página desde un celular real: menú, WhatsApp flotante,
+     acordeón de FAQ y botón de llamada.
+
+CÓMO PROBAR LOCALMENTE ANTES DE SUBIR
+--------------------------------------
+Desde una terminal, dentro de la carpeta "tapetes-atrapamugres-pvc":
+    python -m http.server 8080
+Y abre http://localhost:8080 en el navegador (no abras index.html con doble
+clic, porque las rutas relativas de imágenes y CSS no funcionan igual con
+file://).

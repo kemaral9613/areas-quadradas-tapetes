@@ -1,0 +1,124 @@
+{
+  "name": "areas-cuadradas-base",
+  "description": "Design tokens base (paleta de colores, tipografía y apariencia) extraídos del proyecto areas-cuadradas-landing, pensados como plantilla reutilizable en otros proyectos.",
+  "color": {
+    "brand": {
+      "50": "#EEF7EE",
+      "100": "#D4ECD4",
+      "200": "#B8DCB8",
+      "300": "#9DD76E",
+      "400": "#72B872",
+      "500": "#52AD52",
+      "600": "#4A9C4A",
+      "700": "#3D833D",
+      "800": "#2E692E",
+      "900": "#1F4F1F",
+      "_usage": "Color principal de marca / CTA. 600 se usa para botones primarios, 700 para hover, 300 en gradientes/acentos."
+    },
+    "accent": {
+      "50": "#e8e9ef",
+      "100": "#c5c8d7",
+      "200": "#9ea3bb",
+      "300": "#777da0",
+      "400": "#5a618c",
+      "500": "#3d4578",
+      "600": "#2f375f",
+      "700": "#232946",
+      "800": "#1a1f35",
+      "900": "#111424",
+      "_usage": "Azul-índigo oscuro. 700 se usa típicamente para títulos/headings."
+    },
+    "secondary": {
+      "50": "#f2fbfa",
+      "100": "#d6f3f0",
+      "200": "#ade7e1",
+      "300": "#78D1C9",
+      "400": "#4dbdb5",
+      "500": "#33a39c",
+      "600": "#28837d",
+      "700": "#256a66",
+      "800": "#235652",
+      "900": "#204744",
+      "_usage": "Teal. 500 se usa en iconos y texto eyebrow/etiquetas."
+    },
+    "neutral": {
+      "slate-50": "#f8fafc",
+      "slate-800": "#1e293b",
+      "slate-900": "#0f172a",
+      "_usage": "Escala neutra de Tailwind (slate) usada en gradientes de fondo y bloques oscuros."
+    },
+    "surface": "#F5F7F8",
+    "extra": {
+      "emerald-500": "#10b981",
+      "emerald-600": "#059669",
+      "amber-500": "#f59e0b",
+      "flyer-green": "#a8d32a",
+      "_usage": "emerald: CTA de WhatsApp. amber: badges/etiquetas destacadas. flyer-green: acento puntual en el título tipo flyer del hero."
+    }
+  },
+  "font": {
+    "family": {
+      "sans": ["Inter", "system-ui", "sans-serif"],
+      "display": ["Bebas Neue", "Montserrat", "sans-serif"]
+    },
+    "weight": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800,
+      "black": 900
+    },
+    "size": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem"
+    },
+    "displayTitle": {
+      "fontFamily": ["Bebas Neue", "Montserrat", "sans-serif"],
+      "fontSize": "clamp(48px, 10vw, 64px)",
+      "fontWeight": 900,
+      "lineHeight": 1,
+      "letterSpacing": "2px",
+      "textTransform": "uppercase",
+      "_usage": "Título destacado tipo 'flyer' del hero (src/style.css .flyer-title--white/--green)."
+    },
+    "googleFontsImport": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Montserrat:wght@400;700;900&display=swap"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "14px",
+    "2xl": "16px",
+    "3xl": "24px",
+    "full": "9999px",
+    "_usage": "2xl/3xl son los más usados en cards y contenedores; full para avatares/badges circulares."
+  },
+  "shadow": {
+    "soft": "0 10px 15px -3px rgb(15 23 42 / 0.05), 0 4px 6px -4px rgb(15 23 42 / 0.05)",
+    "brand": "0 8px 16px -4px rgba(74, 156, 74, 0.35)",
+    "focusRing": "0 0 0 2px #ffffff, 0 0 0 4px #4A9C4A"
+  },
+  "animation": {
+    "fadeIn": { "duration": "1s", "easing": "ease-out", "from": { "opacity": 0 }, "to": { "opacity": 1 } },
+    "slideUp": { "duration": "0.8s", "easing": "ease-out", "from": { "opacity": 0, "transform": "translateY(40px)" }, "to": { "opacity": 1, "transform": "translateY(0)" } },
+    "slideDown": { "duration": "0.8s", "easing": "ease-out", "from": { "opacity": 0, "transform": "translateY(-20px)" }, "to": { "opacity": 1, "transform": "translateY(0)" } },
+    "pulseSlow": { "duration": "3s", "iteration": "infinite" }
+  },
+  "componentClasses": {
+    "_usage": "Nombres de clases custom (@layer components) usadas en src/style.css del proyecto origen, documentadas aquí como referencia de convención de nombres a replicar en nuevos proyectos.",
+    "surfaces": [".glass", ".glass-card", ".glass-hero", ".gradient-overlay", ".gradient-text"],
+    "buttons": [".btn-primary", ".btn-secondary", ".btn-whatsapp"],
+    "layout": [".section-padding", ".container-max"],
+    "heroFlyer": [".flyer-card", ".flyer-card__dots", ".flyer-card__content", ".flyer-title--white", ".flyer-title--green", ".flyer-feature__icon"],
+    "mobileNav": [".mobile-menu-*", ".mobile-backdrop", ".hamburger*"]
+  },
+  "_usage": "Cómo reutilizar este archivo en un proyecto nuevo: (1) Tailwind: copiar 'color' dentro de theme.extend.colors, 'font.family' dentro de theme.extend.fontFamily y 'animation' dentro de theme.extend.animation/keyframes de tailwind.config.js. (2) CSS plano: generar variables :root (--color-brand-600, --font-sans, --radius-2xl, etc.) a partir de cada valor. (3) Incluir 'font.googleFontsImport' como <link> en el <head> para cargar las tipografías."
+}
