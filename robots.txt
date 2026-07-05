@@ -1,0 +1,10 @@
+# Este archivo es documental: robots.txt solo es leído por los crawlers cuando
+# vive en la raíz del dominio (https://areasquadradas.com/robots.txt), no dentro
+# de esta subcarpeta. El robots.txt que realmente aplica es el de la raíz,
+# gestionado junto con WordPress. Ver INSTRUCCIONES-DESPLIEGUE.txt para el
+# contenido que debe añadirse allí.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://areasquadradas.com/tapetes-atrapamugres-pvc/sitemap.xml
