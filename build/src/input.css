@@ -536,21 +536,7 @@
     }
   }
 
-  /* Tarjetas genéricas */
-  .feature-card {
-    background-color: white;
-    border-radius: 1.25rem;
-    padding: 1.75rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgb(15 23 42 / 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .feature-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 35px -15px rgb(15 23 42 / 0.18);
-  }
-
-  /* Flyer de beneficios: lista de icono + texto en una sola tarjeta, en vez de tarjetas sueltas */
+/* Flyer de beneficios: lista de icono + texto en una sola tarjeta, en vez de tarjetas sueltas */
   .benefits-flyer {
     background-color: white;
     border-radius: 1.75rem;
