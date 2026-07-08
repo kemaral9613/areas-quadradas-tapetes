@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repository is
 
-A single static (HTML/CSS/JS, no backend, no framework) landing page for **Áreas Quadradas**, a Colombian company, selling personalized PVC dirt-trapping mats ("tapetes atrapamugres"). It is built for Google Ads / Facebook Ads campaigns and is meant to be uploaded as-is via Hostinger's File Manager into a subfolder of an existing WordPress site — it does **not** run on Node/WordPress in production; Node is only used locally to compile assets.
+A single static (HTML/CSS/JS, no backend, no framework) landing page for **Áreas Quadradas**, a Colombian company, selling personalized PVC dirt-trapping mats ("tapetes atrapamugre"). It is built for Google Ads / Facebook Ads campaigns and is meant to be uploaded as-is via Hostinger's File Manager into a subfolder of an existing WordPress site — it does **not** run on Node/WordPress in production; Node is only used locally to compile assets.
 
 - `build/` — local-only build tooling (Tailwind CLI, Terser). Never deployed.
 - `dist/tapetes-atrapamugres-pvc/` — the actual deployable site. Everything here is uploaded verbatim to `public_html/tapetes-atrapamugres-pvc/` on the live host.

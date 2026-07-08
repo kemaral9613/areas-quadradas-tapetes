@@ -1,4 +1,4 @@
-INSTRUCCIONES DE DESPLIEGUE — Landing Tapetes Atrapamugres (Áreas Quadradas)
+INSTRUCCIONES DE DESPLIEGUE — Landing Tapetes Atrapamugre (Áreas Quadradas)
 ================================================================================
 
 1. SUBIR LA LANDING A HOSTINGER
@@ -25,7 +25,7 @@ INSTRUCCIONES DE DESPLIEGUE — Landing Tapetes Atrapamugres (Áreas Quadradas)
 4. CREAR EL ENLACE EN EL MENÚ DE WORDPRESS
    - WordPress → Apariencia → Menús → Añadir elementos → Enlaces personalizados.
    - URL: https://areasquadradas.com/tapetes-atrapamugres-pvc/
-   - Texto del enlace: "Tapetes Atrapamugres" (o el que prefieras).
+   - Texto del enlace: "Tapetes Atrapamugre" (o el que prefieras).
    - Añadir al menú → Guardar menú.
 
 5. GOOGLE SEARCH CONSOLE

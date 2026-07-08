@@ -88,7 +88,7 @@
     var openSelectorModal = function () {
       modalTraffic.textContent = "Tráfico: " + selection.trafficLabel;
       modalImage.src = "assets/img/colores/" + selection.color + ".webp";
-      modalImage.alt = "Tapete atrapamugres color " + selection.colorLabel;
+      modalImage.alt = "Tapete atrapamugre color " + selection.colorLabel;
       modalColorName.textContent = selection.colorLabel;
       modalWaBtn.setAttribute("href", waBtn.getAttribute("href"));
       modalBackdrop.classList.add("is-open");
@@ -113,7 +113,7 @@
       if (isReady) {
         summaryText.textContent = "Tu selección: " + selection.trafficLabel + " · " + selection.colorLabel;
         var msg =
-          "Hola, quiero cotizar un tapete atrapamugres personalizado.\n" +
+          "Hola, quiero cotizar un tapete atrapamugre personalizado.\n" +
           "Tipo de tráfico: " + selection.trafficLabel + "\n" +
           "Color: " + selection.colorLabel;
         waBtn.setAttribute("href", "https://wa.me/573006715101?text=" + encodeURIComponent(msg));
