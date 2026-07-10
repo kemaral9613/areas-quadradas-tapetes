@@ -208,6 +208,29 @@
     });
   }
 
+  // Conversiones de Google Ads. Los event snippets viven en el <head> de index.html.
+  // Delegado en document porque el href del selector se reescribe dinámicamente.
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href]");
+    if (!link) return;
+
+    var href = link.getAttribute("href");
+
+    if (href.indexOf("https://wa.me/") === 0) {
+      if (link.classList.contains("is-disabled")) return;
+      // Sin argumento: el callback no navega y se respeta target="_blank".
+      if (typeof window.gtag_report_conversion_whatsapp === "function") {
+        window.gtag_report_conversion_whatsapp();
+      }
+    } else if (href.indexOf("tel:") === 0) {
+      // Con la url: el callback navega, como en el snippet de Google.
+      if (typeof window.gtag_report_conversion_llamada === "function") {
+        e.preventDefault();
+        window.gtag_report_conversion_llamada(href);
+      }
+    }
+  });
+
   // Año dinámico en el footer
   var yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

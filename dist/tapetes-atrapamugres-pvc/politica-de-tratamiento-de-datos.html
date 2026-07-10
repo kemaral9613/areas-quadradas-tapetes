@@ -2,6 +2,29 @@
 <html lang="es-CO">
 <head>
 <meta charset="UTF-8">
+
+<!-- Consent Mode v2: defaults denegados. Debe ejecutarse ANTES de la etiqueta de Google. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- Etiqueta de Google (gtag.js): un solo loader, dos destinos (Google Ads + GA4).
+     Carga siempre, pero sin cookies hasta que el usuario acepte el banner (Consent Mode avanzado). -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7568M44RJ"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-C7568M44RJ');
+  gtag('config', 'AW-11548598729');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Tratamiento de Datos Personales | Áreas Quadradas</title>
 <meta name="description" content="Política de tratamiento de datos personales de Áreas Quadradas, conforme a la Ley 1581 de 2012 de Colombia.">
@@ -67,6 +90,21 @@
   <p>© <span id="current-year">2026</span> Áreas Quadradas – Transformando Espacios.</p>
 </footer>
 
+<!-- Banner de cookies -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="container-max flex flex-col sm:flex-row items-center gap-4 justify-between">
+    <p class="text-sm text-white/85 max-w-2xl">
+      Usamos cookies propias y de terceros (Google Ads, Meta) para medir el rendimiento de nuestras campañas y mejorar tu experiencia. Puedes aceptarlas, rechazarlas o conocer más en nuestra
+      <a href="politica-de-cookies.html" class="underline hover:text-white">Política de cookies</a>.
+    </p>
+    <div class="flex gap-3 shrink-0">
+      <button id="cookie-reject" class="btn-secondary !py-2 !px-4 text-sm !border-white/40">Rechazar</button>
+      <button id="cookie-accept" class="btn-primary !py-2 !px-4 text-sm">Aceptar</button>
+    </div>
+  </div>
+</div>
+
 <script>document.getElementById("current-year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/consent.min.js" defer></script>
 </body>
 </html>

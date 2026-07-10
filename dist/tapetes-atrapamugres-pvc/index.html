@@ -2,6 +2,63 @@
 <html lang="es-CO">
 <head>
 <meta charset="UTF-8">
+
+<!-- Consent Mode v2: defaults denegados. Debe ejecutarse ANTES de la etiqueta de Google. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- Etiqueta de Google (gtag.js): un solo loader, dos destinos (Google Ads + GA4).
+     Carga siempre, pero sin cookies hasta que el usuario acepte el banner (Consent Mode avanzado). -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7568M44RJ"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-C7568M44RJ');
+  gtag('config', 'AW-11548598729');
+</script>
+
+<!-- Event snippet: BTN LLAMAR T-ATRAPAMUGRE. Nombre propio: los dos snippets de Google
+     se llaman igual y el segundo pisaria al primero si se pegan tal cual. -->
+<script>
+function gtag_report_conversion_llamada(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11548598729/bD4vCN67780cEMnD5oIr',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<!-- Event snippet: BTN WHATSAPP T-ATRAPAMUGRE. Llamar sin argumento en enlaces
+     target="_blank": asi el callback no navega y se conserva la pestana nueva. -->
+<script>
+function gtag_report_conversion_whatsapp(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11548598729/rqcECOG7780cEMnD5oIr',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tapetes Atrapamugre Personalizados PVC | Áreas Quadradas Colombia</title>
 <meta name="description" content="Tapetes atrapamugre de PVC para tráfico medio y pesado, con personalización de logo en tráfico pesado. Envíos a toda Colombia. Cotiza gratis por WhatsApp.">
@@ -35,19 +92,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.min.css">
-
-<!-- Consent Mode v2: valores por defecto denegados hasta que el usuario acepte el banner de cookies -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'wait_for_update': 500
-  });
-</script>
 
 <!-- JSON-LD: Organization -->
 <script type="application/ld+json">
@@ -106,7 +150,7 @@
         "itemOffered": {
           "@type": "Product",
           "name": "Tapete atrapamugre personalizado - tráfico pesado",
-          "description": "Tapete atrapamugre de PVC personalizado, reforzado para bodegas, plantas industriales y zonas de alto flujo."
+          "description": "Tapete atrapamugre de PVC personalizado, reforzado para hoteles, centros comerciales, edificios y zonas de alto flujo."
         }
       }
     ]
@@ -159,16 +203,6 @@
     { "@type": "ListItem", "position": 2, "name": "Tapetes Atrapamugre Personalizados", "item": "https://areasquadradas.com/tapetes-atrapamugres-pvc/" }
   ]
 }
-</script>
-
-<!-- Google Ads (gtag.js) — TODO: reemplazar AW-XXXXXXXXXX por el ID real de conversión. Se activa solo si el usuario acepta el banner de cookies. -->
-<script type="text/plain" data-consent="marketing" data-src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-<script type="text/plain" data-consent="marketing">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-XXXXXXXXXX');
-  /* gtag('config', 'G-XXXXXXXXXX'); // TODO: descomentar si también usas GA4 */
 </script>
 
 <!-- Meta Pixel — TODO: reemplazar 000000000000000 por el Pixel ID real. Se activa solo si el usuario acepta el banner de cookies. -->
@@ -484,7 +518,7 @@
             <span class="benefits-feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 002.5 2.5z"/><line x1="3" y1="3" x2="21" y2="21"/></svg>
             </span>
-            <span class="benefits-feature__text"><span>Ignífugo: no propaga llamas</span><span>Cumple normas de seguridad comerciales e industriales.</span></span>
+            <span class="benefits-feature__text"><span>Ignífugo: no propaga llamas</span><span>Cumple normas de calidad y seguridad.</span></span>
           </li>
           <li class="benefits-feature animate-on-scroll delay-150">
             <span class="benefits-feature__icon" aria-hidden="true">
@@ -514,7 +548,7 @@
             <span class="benefits-feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </span>
-            <span class="benefits-feature__text"><span>Tráfico medio y pesado</span><span>Uso doméstico y para bodegas e industrias.</span></span>
+            <span class="benefits-feature__text"><span>Tráfico medio y pesado</span><span>Uso doméstico y para hoteles, centros comerciales y edificios.</span></span>
           </li>
           <li class="benefits-feature animate-on-scroll delay-700">
             <span class="benefits-feature__icon" aria-hidden="true">
@@ -552,8 +586,8 @@
           </div>
           <div class="p-6">
             <span class="badge badge--pesado mb-3">Tráfico pesado</span>
-            <h3 class="text-xl font-bold text-accent-700 mb-2">Reforzado para bodegas e industrias</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-5">Fabricado para resistir flujo constante e intenso en bodegas, plantas industriales, centros comerciales y zonas exteriores.</p>
+            <h3 class="text-xl font-bold text-accent-700 mb-2">Reforzado para alto tráfico</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-5">Fabricado para resistir flujo constante e intenso en hoteles, centros comerciales, edificios y zonas exteriores.</p>
             <a href="https://wa.me/573006715101?text=Hola%2C%20quiero%20cotizar%20un%20tapete%20atrapamugre%20de%20tr%C3%A1fico%20pesado" class="btn-primary w-full sm:w-auto" target="_blank" rel="noopener">Cotizar tráfico pesado</a>
           </div>
         </article>

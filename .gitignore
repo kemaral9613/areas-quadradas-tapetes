@@ -3,3 +3,7 @@ node_modules/
 Thumbs.db
 .claude/settings.local.json
 build/.scratch/
+
+# Copia local del WordPress en producción. Contiene wp-config.php con
+# credenciales de base de datos y salts reales. Nunca debe subirse.
+PAGINA-REAL/

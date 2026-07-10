@@ -616,11 +616,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.45s ease;
   }
   .product-card:hover .product-card__media,
-  .product-card:focus-within .product-card__media,
-  .product-card.is-focused .product-card__media {
+  .product-card:focus-within .product-card__media {
     height: 22rem;
+  }
+  .product-card.is-focused .product-card__img {
+    transform: scale(1.15);
   }
 
   .badge {
