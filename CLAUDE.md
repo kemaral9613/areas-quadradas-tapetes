@@ -9,7 +9,6 @@ A single static (HTML/CSS/JS, no backend, no framework) landing page for **Área
 - `build/` — local-only build tooling (Tailwind CLI, Terser). Never deployed.
 - `dist/tapetes-atrapamugres-pvc/` — the actual deployable site. Everything here is uploaded verbatim to `public_html/tapetes-atrapamugres-pvc/` on the live host.
 - `dist/PARA-RAIZ-DEL-DOMINIO/` — files that must instead be placed at the *domain root* (`public_html/`), not in the subfolder, because `llms.txt`/`robots.txt` only work at origin root. Read `dist/INSTRUCCIONES-DESPLIEGUE.txt` (Spanish) for the full deployment checklist.
-- `PAGINA-REAL/` — untracked local snapshot of the live WordPress root, kept for reference only. **It contains `wp-config.php` with real DB credentials and salts, and is not in `.gitignore`** — never `git add -A` at repo root without checking.
 - `Logo-areas-cuadradas.webp`, `banner-tapete-atrapamugre.webp` — source brand/product images (banner is AI-generated, not real customer photos).
 - `design-tokens.json` — reference-only palette/typography/component-naming spec from a prior sibling project; the values are what `build/src/input.css`'s `@theme` block is based on.
 
